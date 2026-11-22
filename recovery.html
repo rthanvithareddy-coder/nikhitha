@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkPulse – Recovery</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/dataset.js"></script>
+    <script defer src="js/recovery.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">LinkPulse</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="monitor.html">Monitor</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="recovery.html" class="active">Recovery</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="content">
+        <header>
+            <h1>Smart Recovery Control Center</h1>
+        </header>
+        <section class="cards" id="recovery-stages">
+            <div class="card" id="stage-analysis"><h2>Analysis</h2><p>Gathering data…</p></div>
+            <div class="card" id="stage-diagnosis"><h2>Diagnosis</h2><p>Evaluating risk…</p></div>
+            <div class="card" id="stage-assessment"><h2>Risk Assessment</h2><p>Computing recommendation…</p></div>
+            <div class="card" id="stage-recommendation"><h2>Recommendation</h2><p id="recommendation-text">–</p></div>
+            <div class="card" id="stage-verification"><h2>Verification</h2><p id="verification-status">Pending</p></div>
+        </section>
+        <section class="chart-section">
+            <h2>Current Network Health</h2>
+            <canvas id="healthChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkPulse – Recovery</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/recovery.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">LinkPulse</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="monitor.html">Monitor</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="recovery.html" class="active">Recovery</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="content">
+        <header>
+            <h1>Recovery</h1>
+        </header>
+        <section class="cards">
+            <div class="card" id="recovery-action">
+                <h2>Suggested Recovery Steps</h2>
+                <ul id="recovery-steps">
+                    <li>--</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

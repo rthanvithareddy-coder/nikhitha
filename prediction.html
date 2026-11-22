@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkPulse – Prediction</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/dataset.js"></script>
+    <script defer src="js/prediction.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">LinkPulse</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="monitor.html">Monitor</a></li>
+                <li><a href="prediction.html" class="active">Prediction</a></li>
+                <li><a href="recovery.html">Recovery</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="content">
+        <header>
+            <h1>Prediction</h1>
+        </header>
+        <section class="cards">
+            <div class="card" id="prediction-result">
+                <h2>Latest Failure Prediction</h2>
+                <p id="predicted-risk">Risk: --</p>
+                <p id="risk-score">Score: --</p>
+                <p id="network-condition">Condition: --</p>
+                <p id="nearest-info">Nearest Neighbors: --</p>
+                <p id="explanation" style="margin-top:10px; font-style:italic; color:#a0a8c0;">Explanation will appear here.</p>
+            </div>
+        </div>
+        <section class="chart-section">
+            <h2>Failure Probability (next 12h)</h2>
+            <canvas id="predictionChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkPulse – Prediction</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/dataset.js"></script>
+    <script defer src="js/prediction.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">LinkPulse</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="monitor.html">Monitor</a></li>
+                <li><a href="prediction.html" class="active">Prediction</a></li>
+                <li><a href="recovery.html">Recovery</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="content">
+        <header>
+            <h1>Prediction</h1>
+        </header>
+        <section class="cards">
+            <div class="card" id="prediction-result">
+                <h2>Upcoming Failure Prediction</h2>
+                <p id="predicted-time">--</p>
+                <p id="predicted-reason">--</p>
+            </div>
+        </section>
+        <section class="chart-section">
+            <h2>Failure Probability (next 12h)</h2>
+            <canvas id="predictionChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+</body>
+</html>

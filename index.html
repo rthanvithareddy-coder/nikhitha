@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkPulse – Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/dataset.js"></script>
+    <script defer src="js/monitor.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">LinkPulse</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="monitor.html">Monitor</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="recovery.html">Recovery</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="content">
+        <header>
+            <h1>LinkPulse</h1>
+            <p class="tagline">Predict. Detect. Recover. Stay Connected.</p>
+        </header>
+        <section class="cards">
+            <div class="card" id="health-card">
+                <h2>Network Health Score</h2>
+                <p id="health-score">--</p>
+            </div>
+            <div class="card" id="prediction-card">
+                <h2>Latest Prediction</h2>
+                <p id="latest-prediction">--</p>
+            </div>
+            <div class="card" id="quick-links">
+                <h2>Quick Links</h2>
+                <div class="quick-links-grid">
+                    <a href="monitor.html" class="quick-link">Monitor</a>
+                    <a href="prediction.html" class="quick-link">Prediction</a>
+                    <a href="recovery.html" class="quick-link">Recovery</a>
+                    <a href="history.html" class="quick-link">History</a>
+                    <a href="settings.html" class="quick-link">Settings</a>
+                </div>
+            </div>
+        </section>
+        <section class="chart-section">
+            <h2>Network Latency (last 24h)</h2>
+            <canvas id="latencyChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkPulse – History</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/dataset.js"></script>
+    <script defer src="js/history.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">LinkPulse</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="monitor.html">Monitor</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="recovery.html">Recovery</a></li>
+                <li><a href="history.html" class="active">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="content">
+        <header>
+            <h1>Prediction History</h1>
+        </header>
+        <section class="cards">
+            <div class="card">
+                <h2>Filters & Controls</h2>
+                <label for="risk-filter">Risk Level:</label>
+                <select id="risk-filter">
+                    <option value="all">All</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <br/>
+                <button id="clear-history">Clear History</button>
+                <button id="export-csv">Export CSV</button>
+            </div>
+        </section>
+        <section class="table-section">
+            <h2>History Log</h2>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>Date &amp; Time</th>
+                        <th>Signal (%)</th>
+                        <th>Latency (ms)</th>
+                        <th>Packet Loss (%)</th>
+                        <th>Risk</th>
+                        <th>Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p id="no-records" style="display:none;">No prediction history available.</p>
+        </section>
+    </main>
+</body>
+</html>

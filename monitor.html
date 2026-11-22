@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkPulse – Monitor</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/dataset.js"></script>
+    <script defer src="js/monitor.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">LinkPulse</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="monitor.html" class="active">Monitor</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="recovery.html">Recovery</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="content">
+        <header>
+            <h1>Monitor</h1>
+        </header>
+        <section class="cards">
+            <div class="card">
+                <h2>Simulation Mode</h2>
+                <label><input type="checkbox" id="sim-checkbox" /> Enable Simulation</label>
+                <br/>
+                <label for="profile-select">Sample Profile:</label>
+                <select id="profile-select" disabled>
+                    <option value="stable">Stable (4G)</option>
+                    <option value="degraded">Degraded (4G)</option>
+                    <option value="unstable">Unstable (3G)</option>
+                </select>
+                <br/>
+                <button id="analyze-btn">Analyze Network</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            <div class="card" id="metrics-card">
+                <h2>Current Metrics</h2>
+                <p id="status-text">Status: --</p>
+                <p id="signal-text">Signal Strength: --</p>
+                <p id="latency-text">Latency: -- ms</p>
+                <p id="packet-text">Packet Loss: -- %</p>
+                <p id="jitter-text">Jitter: -- ms</p>
+                <p id="dl-text">Download Speed: -- Mbps</p>
+                <p id="ul-text">Upload Speed: -- Mbps</p>
+                <p id="load-text">Network Load: -- %</p>
+            </div>
+        </section>
+        <section class="chart-section">
+            <h2>Real‑time Signal Strength</h2>
+            <canvas id="signalChart" width="400" height="200"></canvas>
+        </section>
+        <section class="chart-section">
+            <h2>Packet Loss Over Time</h2>
+            <canvas id="packetChart" width="400" height="200"></canvas>
+        </section>
+        <section class="chart-section">
+            <h2>Latency (ms) Over Time</h2>
+            <canvas id="latencyChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+</body>
+</html>
